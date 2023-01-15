@@ -22,6 +22,17 @@
         margin-top: 20px;
         text-align: center;
         font-weight: 300;
-        
+    }
+    &__icon {
+        &_animated {
+            animation-name: heartbeat; // обязательный атрибут, имя анимации
+            animation-duration: 1.5s; // обязательный атрибут, длительность анимации
+            animation-timing-function: ease; // функция Безье
+            animation-iteration-count: infinite; // количество повторений анимаций
+            // animation: heartbeat 1.5s ease infinite // сокращённая запись анимации
+            &:hover {
+                animation-play-state: paused; // при наведении на элемент анимация будет прерываться
+            }
+        }
     }
 }
