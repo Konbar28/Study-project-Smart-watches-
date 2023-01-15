@@ -115,4 +115,11 @@ $(document).ready(function(){
             $('.pageup').fadeOut(); // в противном случае элемент скрыт (display: none в _pageup.scss)
           }
       });
+
+      $("a[href^='#']").click(function(){ // получаем атрибут с # и происходит клик пользователя
+        const _href = $(this).attr("href"); // создаём переменную href и получаем в эту переменную то значение, которое было в атрибуте href
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"}); // активируется анимация на JQuery
+        return false;
+      });
+
   });
