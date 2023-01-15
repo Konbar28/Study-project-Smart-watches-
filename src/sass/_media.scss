@@ -1,0 +1,8 @@
+@media (max-width: 767px) {
+    .benefits {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
