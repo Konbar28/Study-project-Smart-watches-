@@ -122,13 +122,16 @@
         &__list {
             position: relative;
             width: 50%;
-            margin-left: 20px;
+            
             transform: translateX(0);
             padding-right: 20px;
             transition: 0.5s all;
             padding-left: 19px;
             margin-bottom: 0;
-            list-style-type: none;
+            // list-style-type: none;
+            ul {
+                padding-left: 0;
+            }
             &_active {
                 transform: translateX(-100%);
                 margin-left: 0px;
@@ -138,15 +141,18 @@
                 color: #555555;
                 font-size: 14px;
                 font-weight: 300;
-                margin-bottom: 20px;
+                margin-bottom: 0px;
+                list-style-type: none;
+                margin-right: 30px;
                 &:before {
                     content: '';
                     position: absolute;
                     width: 5px;
                     height: 5px;
                     background-color: $main-color;
-                    left: -14px;
-                    top: 7px;
+                    left: -15px;
+                    top: 8px;
+
                 }
             }
         }

@@ -116,7 +116,7 @@ $(document).ready(function(){
           }
       });
 
-      $("a[href^='#']").click(function(){ // получаем атрибут с # и происходит клик пользователя
+      $("a[href=#up]").click(function(){ // получаем атрибут с # и происходит клик пользователя
         const _href = $(this).attr("href"); // создаём переменную href и получаем в эту переменную то значение, которое было в атрибуте href
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"}); // активируется анимация на JQuery
         return false;
